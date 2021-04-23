@@ -1,319 +1,394 @@
-<h1 class="text-primary text-center">Virtual Workshop Registration Form</h1><br>
-<div class="cotainer border shadow">
-  <div class="row row1" >
-    <div class="col-4">
-      <p></p>
-      <p> join 3-day webdevelopment</p>
-      <p> virtual Workshop and become a</p>
-      <p> hilable freelance </p>
+<h1 class="text-primary text-center pt-3 pb-3">Virtual Workshop Registration Form</h1>
+<div class="row">
+  <div class="container-fluid mystyle border pt-3 pl-5 pb-3 shadow col-10" style="border-radius: 10px;">
+
+    <div class="info text-danger">
+      <h5 class="text-secondary">join 3-day webdevelopment virtual Workshop and become a hilable freelancer </h5>
     </div>
-    <div class="col-4">
-      <h4>virtual Workshop schedule</h4>
-      <p>May 1-3 9:00 AM to 1:00 PM EST </p>
-      <p>May 15-18 9:00 AM to 1:00 PM EST </p>
-      <p>June 1-3 9:00 AM to 1:00 PM EST </p>
-      <p>June 15-18 9:00 AM to 1:00 PM EST </p>
-      <p>July 1-3 9:00 AM to 1:00 PM EST </p>
-      <p>July 15-18 9:00 AM to 1:00 PM EST </p>
+
+    <div class="cotainer mystyle2 border shadow mt-3 mb-3 pt-3 pb-3 ">
+      <div class="pl-3">
+          <h5 class='text-success'>Workshop Schedule:</h5><br>
+          <p>May 1-3         9:00 AM to 1:00 PM EST </p>
+          <p>May 15-18       9:00 AM to 1:00 PM EST </p>
+          <p>June 1-3        9:00 AM to 1:00 PM EST </p>
+          <p>June 15-18      9:00 AM to 1:00 PM EST </p>
+          <p>July 1-3        9:00 AM to 1:00 PM EST </p>
+          <p>July 15-18      9:00 AM to 1:00 PM EST </p>
+
+      </div>
+
 
     </div>
-  </div>
-  <hr>
-  
-    <form #myForn="ngForm" class='myform'>
+    <form #myForm="ngForm" (ngSubmit)="onSubmit()">
 
-      <div class="formGroup">
-        <div class="form-check row2">
-          <label class="row2"><b>Please rate your webdevelopment or programming knowledge</b></label><br>
-          <input class="form-check-input" name="" type="checkbox">
-          <label class="form-check-label">I don't have any idea at all</label><br>
-          <input class="form-check-input" name="" type="checkbox">
-          <label class="form-check-label">I am a newbie in webdevelopment and programming</label><br>
-          <input class="form-check-input" name="" type="checkbox">
-          <label class="form-check-label">I have watched tutorial online</label><br>
-          <input class="form-check-input" name="" type="checkbox">
-          <label class="form-check-label">I have a webdevelopment related working experience</label><br>
-          <input class="form-check-input" name="" type="checkbox">
-          <label class="form-check-label">I am currently working as a webdeveloper and wants to improve my
-            skill</label><br>
-          <input class="form-check-input" name="" type="checkbox">
+
+      <div class="form-group pl-4"><br>
+        <label><b>Please rate your webdevelopment or programming knowledge</b></label><br>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="knowledge" value="I don't have any idea at all" [(ngModel)]='data.knowledge'>
+          <label class="form-check-label">I don't have any idea at all</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="knowledge" value="I am a newbie in webdevelopment and programming" [(ngModel)]='data.knowledge'>
+          <label class="form-check-label">I am a newbie in webdevelopment and programming</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="knowledge" value="I have watched tutorial online" [(ngModel)]='data.knowledge'>
+          <label class="form-check-label">I have watched tutorial online</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="knowledge" value="I have a webdevelopment related working experience" [(ngModel)]='data.knowledge'>
+          <label class="form-check-label">I have a webdevelopment related working experience</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="knowledge" value="I am currently working as a webdeveloper and wants to improve my skill" [(ngModel)]='data.knowledge'>
+          <label class="form-check-label">I am currently working as a webdeveloper and wants to improve my skill</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" #other name="knowledge" value='other.value' type="radio" [(ngModel)]='data.knowledge'>
           <input type="text" placeholder="Other">
         </div>
-
-        <div class="formGroup">
-          <label class="row2"><b>I would like to learn the following</b></label><br>
-          <div class="row row2">
-
-            <div class="form-check col-5">
-              <input class="form-check-input" name="" type="checkbox">
-              <label class="form-check-label">Html</label><br>
-              <input class="form-check-input" name="" type="checkbox">
-              <label class="form-check-label">Java Script</label><br>
-              <input class="form-check-input" name="" type="checkbox">
-              <label class="form-check-label">Database</label><br>
-              <input class="form-check-input" name="" type="checkbox">
-              <label class="form-check-label">Ruby on rails</label><br>
-              <input class="form-check-input" name="" type="checkbox">
-              <label class="form-check-label">DevOps</label><br>
-              <input class="form-check-input" name="" type="checkbox">
-              <label class="form-check-label">Front End Development</label><br>
-              <input class="form-check-input" name="" type="checkbox">
-              <input type="text" placeholder="Other">
-            </div>
-
-            <div class="form-check col-5">
-              <input class="form-check-input" name="" type="checkbox">
-              <label class="form-check-label">CSS</label><br>
-              <input class="form-check-input" name="" type="checkbox">
-              <label class="form-check-label">PHP</label><br>
-              <input class="form-check-input" name="" type="checkbox">
-              <label class="form-check-label">Wordpress</label><br>
-              <input class="form-check-input" name="" type="checkbox">
-              <label class="form-check-label">Python(Django or Flask)</label><br>
-              <input class="form-check-input" name="" type="checkbox">
-              <label class="form-check-label">Web-security</label><br>
-              <input class="form-check-input" name="" type="checkbox">
-              <label class="form-check-label">Back End Development</label><br>
-              <input class="form-check-input" name="" type="checkbox">
-              <input type="text" placeholder="Other">
-            </div>
-          </div>
-        </div>
       </div>
 
-      <div class="container">
-        <div class="text-primary">
-          <h1>Participation Information</h1>
-          <hr>
-          <div class="formGroup">
-            <h5>Name</h5>
-            <div class="row">
-              <div class="col-4">
-                <input type="text" name="fname" id="fname" placeholder="Enter your First Name" class="form-control ">
-                <label>Area Code </label>
-              </div>
-              <div class="col-8">
-                <input type="text" name="fname" id="fname" placeholder="Enter your Last Name" class="form-control ">
-                <label>Phone Number</label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr>
-
-        <div class="text-primary">
-          <div class="formGroup">
-            <h5>Phone Number</h5>
-            <div class="row">
-              <div class="col-4">
-                <input type="text" name="fname" id="fname"  class="form-control ">
-                <label>First Name </label>
-              </div>
-              <div class="col-8">
-                <input type="text" name="fname" id="fname"  class="form-control ">
-                <label>Last Name</label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr>
-
-        <div class="text-primary">
-          <div class="formGroup">
-            <h5>Email</h5>
-            <div class="row">
-              <div class="col-12">
-                <input type="text" name="fname" id="fname"  class="form-control ">
-                <label>example@example.com </label>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-        <div class="text-primary">
-          <div class="formGroup">
-            <h5>Address</h5>
-            <div class="row">
-              <div class="col-12">
-                <input type="text" name="fname" id="fname"  class="form-control ">
-                <label>street Address </label>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-12">
-                <input type="text" name="fname" id="fname"  class="form-control ">
-                <label>street Address Line-2 </label>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-6">
-                <input type="text" name="fname" id="fname"  class="form-control ">
-                <label>city </label>
-              </div>
-
-              <div class="col-6">
-                <input type="text" name="fname" id="fname"  class="form-control ">
-                <label>state/ Provinence </label>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-12">
-                <input type="text" name="fname" id="fname"  class="form-control ">
-                <label>Postal/ Zip code </label>
-              </div>
-            </div>
-
-
-            <div class="text-success">
-              <div class="formGroup">
-                <h5>Occupation</h5>
-                <div class="row">
-                  <div class="col-12">
-                    <input type="text" name="fname" id="fname"  class="form-control ">
-                    <label>optional/ Current or Previous</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="text-success">
-              <div class="formGroup">
-                <h5>Company Name</h5>
-                <div class="row">
-                  <div class="col-12">
-                    <input type="text" name="fname" id="fname"  class="form-control ">
-                    <label>optional/ Current or Previous </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="text-success">
-              <div class="formGroup">
-                <h5>Job Position <title></title></h5>
-                <div class="row">
-                  <div class="col-12">
-                    <input type="text" name="fname" id="fname"  class="form-control ">
-                    <label>optional/ Current or Previous </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <hr>
-
-          </div>
-        </div>
-
-
-      </div>
-
-      <div class="text-center">
-        <h1>
-          Payment Information
-        </h1>
-      </div>
-      
-      <div class="formGroup row2">
-        <label><b>Workshop Dates</b></label><br>
+      <div class="formGroup pl-3">
+        <label><b>I would like to learn the following</b></label><br>
         <div class="row">
 
+          <div class="form-check col-5 pl-5">
+            <input class="form-check-input" name="html" type="checkbox" [(ngModel)]="data.subjects.html">
+            <label class="form-check-label">Html</label><br>
+            <input class="form-check-input" name="Java Script" type="checkbox" [(ngModel)]="data.subjects.javaScript">
+            <label class="form-check-label">Java Script</label><br>
+            <input class="form-check-input" name="Database" type="checkbox" [(ngModel)]="data.subjects.database">
+            <label class="form-check-label">Database</label><br>
+            <input class="form-check-input" name="Ruby on rails" type="checkbox" [(ngModel)]="data.subjects.rubyOnRails">
+            <label class="form-check-label">Ruby on rails</label><br>
+            <input class="form-check-input" name="DevOps" type="checkbox"[(ngModel)]="data.subjects.devOps">
+            <label class="form-check-label">DevOps</label><br>
+            <input class="form-check-input" name="Front End Development" type="checkbox" [(ngModel)]="data.subjects.frontend">
+            <label class="form-check-label">Front End Development</label><br>
+            <input class="form-check-input" name="other" type="checkbox" [(ngModel)]="data.subjects.html">
+            <input type="text" placeholder="Other">
+          </div>
+
           <div class="form-check col-5">
-            <input class="form-check-input" name="" type="checkbox">
-            <label class="form-check-label">May 1-3</label><br>
-            <input class="form-check-input" name="" type="checkbox">
-            <label class="form-check-label">June 1-3</label><br>
-            <input class="form-check-input" name="" type="checkbox">
-            <label class="form-check-label">July 1-3</label><br>
-          </div>
+            <input class="form-check-input" name="CSS" type="checkbox" [(ngModel)]="data.subjects.css">
+            <label class="form-check-label">CSS</label><br>
+            <input class="form-check-input" name="PHP" type="checkbox" [(ngModel)]="data.subjects.php">
+            <label class="form-check-label">PHP</label><br>
+            <input class="form-check-input" name="Wordpress" type="checkbox" [(ngModel)]="data.subjects.wordpress">
+            <label class="form-check-label">Wordpress</label><br>
+            <input class="form-check-input" name="Python" type="checkbox" [(ngModel)]="data.subjects.python">
+            <label class="form-check-label">Python(Django or Flask)</label><br>
+            <input class="form-check-input" name="Web-security" type="checkbox" [(ngModel)]="data.subjects.webSecurity">
+            <label class="form-check-label">Web-security</label><br>
+            <input class="form-check-input" name="Back End Development" type="checkbox" [(ngModel)]="data.subjects.other">
+            <label class="form-check-label">Back End Development</label><br>
 
-          <div class="form-check col-6">
-            <input class="form-check-input" name="" type="checkbox">
-            <label class="form-check-label">May 15-18</label><br>
-            <input class="form-check-input" name="" type="checkbox">
-            <label class="form-check-label">June 15-18</label><br>
-            <input class="form-check-input" name="" type="checkbox">
-            <label class="form-check-label">July 15-18</label><br>
-           
           </div>
         </div>
       </div>
 
-      <br>
-      <div class="row row2">
-        <div class="col-5">
-          <h5>Virtual workshop Payment</h5>
-        </div>
-        <div class="col-6">
-          <input class="form-check-input" name="" type="checkbox">
-            <label class="form-check-label">Participation fee $200</label><br>
+      <h1 class="bg-primary border shadow text-center mt-5 mb-5 pt-2 pb-2" style="border-radius: 6px;">Participation Information</h1>
+      <div class="formGroup">
+        <h5>Name</h5>
+        <div class="row">
+          <div class="col-6">
+            
+            <input type="text" name="fname" #fname="ngModel" [class.is-invalid]="fname.invalid && fname.touched" id="fname" placeholder="Enter your First Name" class="form-control" [(ngModel)]="data.firstName" required>
+            <label>First Name</label>
+            <small class="text-danger" *ngIf="fname.invalid && fname.touched">First Name is required</small>
+          </div>
+          <div class="col-6">
+            <input type="text" name="lname"  #lname="ngModel" [class.is-invalid]="lname.invalid && lname.touched" id="fname" placeholder="Enter your Last Name" class="form-control "[(ngModel)]="data.lastName" required>
+            <label>Last Name</label>
+            <small class="text-danger" *ngIf="lname.invalid && lname.touched">Last Name is required</small>
+          </div>
         </div>
       </div>
-      
-      <div class="text-success">
+      <hr>
+
+      <div class="formGroup">
+        <h5>Phone Number</h5>
+        <div class="row">
+          <div class="col-4">
+            
+            <input type="text" name="area"  #areaCode="ngModel" [class.is-invalid]="areaCode.invalid && areaCode.touched" id="fname" class="form-control " [(ngModel)]="data.areaCode" required>
+            <label>Area code</label>
+            <small class="text-danger" *ngIf="areaCode.invalid && areaCode.touched">Area Code is required</small>
+          </div>
+          <div class="col-8">
+            <input type="text" name="phone"  #phone="ngModel" [class.is-invalid]="phone.invalid && phone.touched"id="fname"pattern="^\d{10}$"  class="form-control "[(ngModel)]="data.phone" required>
+            <label>Phone numner</label>
+            <div *ngIf="phone.errors && (phone.invalid && phone.touched)">
+              <small class="text-danger" *ngIf="phone.errors.required">phone number is required</small>
+              <small class="text-danger" *ngIf="phone.errors.pattern">phone number must be 10 digits</small>
+          </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      <div class="formGroup">
+        <h5>Email</h5>
+        <div class="row">
+          <div class="col-12">
+            <input type="text" name="email" id="email"  #email="ngModel" [class.is-invalid]="email.invalid && email.touched" pattern='^(\w|\.|\_|\-)+[@](\w|\_|\-|\.)+[.]\w{2,3}$' class="form-control "[(ngModel)]="data.email" required>
+            <label>example@example.com </label>
+            <div *ngIf="email.errors && (email.invalid && email.touched)">
+              <small class="text-danger" *ngIf="email.errors.required">email is required</small>
+              <small class="text-danger" *ngIf="email.errors.pattern">email is invalid</small>
+          </div>
+
+          </div>
+        </div>
+      </div>
+
+      <hr>
+      <div ngFormGroup="address"></div>
+      <div class="formGroup">
+        <h5>Address</h5>
+        <div class="row">
+          <div class="col-12">
+            <input type="text" name="ad1" id="ad1"  #address1="ngModel" [class.is-invalid]="address1.invalid && address1.touched" class="form-control "[(ngModel)]="data.address.streetLine1" required>
+            <label>street Address Line-1</label>
+            <small class="text-danger" *ngIf="address1.invalid && address1.touched">address is required</small>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <input type="text" name="ad2" id="ad2"  #address2="ngModel" [class.is-invalid]="address2.invalid && address2.touched" class="form-control "[(ngModel)]="data.address.streetLine2" required>
+            <label>street Address Line-2 </label>
+            <small class="text-danger" *ngIf="address2.invalid && address2.touched" >address is required</small>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            <input type="text" name="city" id="city" class="form-control "  #city="ngModel" [class.is-invalid]="city.invalid && city.touched" [(ngModel)]="data.address.city" required>
+            <label>city </label>
+            <small class="text-danger" *ngIf="city.invalid && city.touched">City is required</small>
+          </div>
+
+          <div class="col-6">
+            <input type="text" name="state" id="city" class="form-control " #state ="ngModel" [class.is-invalid]="state.invalid && state.touched"  [(ngModel)]="data.address.state" required>
+            <label>state/ Provinence </label>
+            <small class="text-danger" *ngIf="state.invalid && state.touched">State is required</small>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <input type="text" name="postalCode" id="fname" class="form-control " #postal="ngModel" [class.is-invalid]="postal.invalid && postal.touched" [(ngModel)]="data.address.postalCode" required>
+            <label>Postal/ Zip code </label>
+            <small class="text-danger" *ngIf="postal.invalid && postal.touched">Postal code is required</small>
+          </div>
+        </div>
+
+      </div>
+      <hr><br>
+
+      <div class="formGroup">
+        <h5>Occupation</h5>
+        <div class="row">
+          <div class="col-12">
+            <input type="text" name="occupation" id="occupation" class="form-control" [(ngModel)]="data.occupation">
+            <label>optional/ Current or Previous</label>
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      <div class="formGroup">
+        <h5>Company Name</h5>
+        <div class="row">
+          <div class="col-12">
+            <input type="text" name="company" id="company" class="form-control " [(ngModel)]="data.company">
+            <label>optional/ Current or Previous </label>
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      <div class="formGroup">
+        <h5>Job Position <title></title>
+        </h5>
+        <div class="row">
+          <div class="col-12">
+            <input type="text" name="position" id="position" class="form-control " [(ngModel)]="data.position">
+            <label>optional/ Current or Previous </label>
+          </div>
+        </div>
+      </div>
+
+      <hr><br>
+
+      <h1 class="bg-primary border shadow text-center mt-5 mb-5 pt-2 pb-2" style="border-radius: 6px;">Payment Information</h1>
+      <div class="formGroup"><br>
+        <label><b>Workshop Dates</b></label><br>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="date" value="May 1-3" [(ngModel)]="data.workshopDate">
+              <label class="form-check-label">May 1-3</label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="date" value="June 1-3" [(ngModel)]="data.workshopDate">
+              <label class="form-check-label">June 1-3</label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="date" value="July 1-3" [(ngModel)]="data.workshopDate">
+              <label class="form-check-label">July 1-3</label>
+            </div>
+          </div>
+
+
+          <div class="col-6">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="date" value="May 15-18" [(ngModel)]="data.workshopDate">
+              <label class="form-check-label">May 15-18</label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="date" value="June 15-18" [(ngModel)]="data.workshopDate">
+              <label class="form-check-label">June 15-18</label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="date" value="July 15-18" [(ngModel)]="data.workshopDate">
+              <label class="form-check-label">July 15-18</label>
+            </div>
+          </div><br>
+
+        </div><br>
+        <div class="formGroup">
+          <div class="row">
+            <div class="col-6">
+              <h5>Virtual Workshop Payment</h5>
+            </div>
+            <div class="col-6">
+              <input class="form-check-input" name="" type="checkbox">
+              <label class="form-check-label">Participation fee $200</label><br>
+            </div>
+          </div>
+        </div><br>
+
         <div class="formGroup">
           <h5>Payment Method</h5>
           <div class="row">
             <div class="col-12">
-              <select class="custom-select" >
-                <option value="" selected>UPI</option>
-                <option value="" >Debit card</option>
-                <option value="" >Credit Card</option>
-          
-             </select>
+              <select class="custom-select" name="payment" #payment="ngModel" [class.is-invalid]="payment.invalid && payment.touched" [(ngModel)]="data.paymentMethod" required>
+                <option value="UPI" selected>UPI</option>
+                <option value="Debit Card">Debit card</option>
+                <option value="Credit Card">Credit Card</option>
+              </select>
+              <small class="text-danger" *ngIf="payment.invalid && payment.touched">select payment method</small>
             </div>
           </div>
-        </div>
-      </div>
+        </div><br>
 
-      <div class="text-success">
         <div class="formGroup">
-          <h5>Any Information or Comments you would like to share?</h5>
-          <div class="row">
+          <h5 >Any Information or Comments you would like to share?</h5>
+          <div class="row ">
             <div class="col-12">
-              <textarea name="fname" id="fname" placeholder="Type here..." class="form-control" rows="5"></textarea>
+              <textarea name="comment" id="comment" placeholder="Type here..." class="form-control" rows="5" [(ngModel)]="data.comments"></textarea>
             </div>
           </div>
-        </div>
-      </div>
+        </div><br>
 
-      <div class="formGroup">
-        <label><b>How did you know about this virtual program</b></label><br>
-        <div class="row row-2">
+        <div class="formGroup">
+          <label><b>How did you know about this virtual program</b></label><br>
+          <div class="row">
+            <div class="col-6">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="source" value="Facebook" [(ngModel)]="data.source">
+                <label class="form-check-label">Facebook</label>
+              </div>
 
-          <div class="form-check col-5 row-2">
-            <input class="form-check-input" name="" type="checkbox">
-            <label class="form-check-label">Facebook</label><br>
-            <input class="form-check-input" name="" type="checkbox">
-            <label class="form-check-label">Instagram</label><br>
-            <input class="form-check-input" name="" type="checkbox">
-            <label class="form-check-label">Search Engine</label><br>
-            <input class="form-check-input" name="" type="checkbox">
-            <label class="form-check-label">Refferal</label><br>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="source" value="Instagram" [(ngModel)]="data.source">
+                <label class="form-check-label">Instagram</label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="source" value="Search Engine" [(ngModel)]="data.source">
+                <label class="form-check-label">Search Engine</label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="source" value="Refferal" [(ngModel)]="data.source">
+                <label class="form-check-label">Refferal</label>
+              </div>
+
+            </div>
+
+            <div class="col-6">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="source" value="Twitter" [(ngModel)]="data.source">
+                <label class="form-check-label">Twitter</label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="source" value="Youtube" [(ngModel)]="data.source">
+                <label class="form-check-label">Youtube</label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="source" value="Online Ads" [(ngModel)]="data.source">
+                <label class="form-check-label">Online Ads</label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" name="source" #source type="radio" value="source.value" [(ngModel)]="data.source">
+                <input type="text" placeholder="Other">
+              </div>
+
+            </div>
+
+
           </div>
-
-          <div class="form-check col-6">
-            <input class="form-check-input" name="" type="checkbox">
-            <label class="form-check-label">Twitter</label><br>
-            <input class="form-check-input" name="" type="checkbox">
-            <label class="form-check-label">Youtube</label><br>
-            <input class="form-check-input" name="" type="checkbox">
-            <label class="form-check-label">Online Ads</label><br>
-            <input class="form-check-input" name="" type="checkbox">
-            <input type="text" placeholder="Other">
-           
-          </div>
         </div>
+        <br><br>
+        <div class="formGroup text-center">
+          <button class="btn btn-primary" type="submit">REGISTER NOW</button>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
 
-      <div class="text-center">
-        <button class="btn btn-primary"  type="submit" >Regiter Now</button>
-      </div>
-      
+
+
+
+
+
+
+
+
 
 
 
@@ -327,9 +402,20 @@
 
 
     </form>
- 
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
 
 
 </div>
-
-<router-outlet></router-outlet>

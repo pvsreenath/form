@@ -1,9 +1,20 @@
-.row1{
-    margin-left: 7%;
+.mystyle{
+    background-color: rgb(198, 100, 236);
 }
-form{
-    background-color: rgb(233, 166, 200);
+.mystyle2{
+    background-color: rgb(159, 181, 230);
+    border-radius: 10px;
 }
-.row2{
-    margin-left: 110px;
+p{
+    color: rgb(42, 5, 110);
+}
+label{
+    color:rgb(15, 3, 128)
+}
+h1{
+    color:rgb(8, 83, 5);
+    
+}
+h5{
+    color:rgb(10, 95, 151)
 }
